@@ -59,8 +59,38 @@ var tweet = prompt("comment is here");
 var tweetCount = tweetCount.length;
 alert("You have written " + tweetCount + " characters, you have : " +(tweetCount - 180) + " characters");
 
+////////////////////////////////////////////////////
+
+// Slice() fonksiyonu
+
+var bread = [1,2,3,4,5,6];
+bread.slice(2,4);        // result 2,3,4
+
+/* Daha önce kaç karakter harf yazdıgımızı söyleyen ve kaç karakterimiz kaldıgını söyleyen kod yazmıştık şimdide 
+twitter'da ki gibi sadece 140 karakteri alan bir kod yazalım. */
+
+var tweet = prompt("Compose your tweet : ")
+var tweetUnder140 = tweet.slice(0,140); // Burada 0 ile 140 karakter arasında ki karakteri seç dedik.
+alert(tweetUnder140);
+
+// Burada kodumuzu tek bir satıra indirebiliriz. Değişkenlere olan zorunluluğumuzu kaldıralım.
+
+alert(prompt("Compose your tweet : ").slice(0,140));
 
 
+////////////////////////////////////////////////////
 
+// toUpperCase() fonksiyonu - tüm harfleri büyük yapar.
 
+// toLowerCase() fonksiyonu - tüm harfleri küçük yapar.
+
+// Şimdiye kadar öğrendiklerimizle aldığımız küçük harfli ismi ilk harfini büyük yazdıralım.
+
+var named = prompt("What is your name ; ");
+var firstChar = named.slice(0,1);     // ilk harfi bulduk.
+var upperCaseFirstChar = firstChar.toUpperCase(); // İlk harfi büyüttük
+var restOfName = named.slice(1,named.length);  // Geri kalan harfleri aldık
+restOfName = restOfName.toLowerCase();
+var capitalisedName = upperCaseFirstChar + restOfName;
+alert("Hello ; " + capitalisedName);  // ve onları birleştirdik.
 
