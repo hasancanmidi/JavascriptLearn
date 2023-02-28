@@ -26,11 +26,9 @@ function lifeInWeeks(age){
 
 //Creating the function
 function getMilk(money){
-    console.log("but" + calcBottles(money, 1.5) + "bottles of milk");
-    return calcChange(money, 1.5); //Remainder of this division.
+    console.log("but" + calcBottles(money, costPerBottle) + "bottles of milk");
+    return calcChange(money, costPerBottle); //Remainder of this division.
 }
-//Calling the function
-var change = getMilk(4);
 
 function calcBottles(startingMoney, costPerBottle) {
     var numberOfBottles = Math.floor(startingMoney / costPerBottle);
@@ -40,3 +38,5 @@ function calcChange(startingAmount, costPerBottle) {
     var change = startingAmount % costPerBottle;
     return change;
 }
+
+console.log("Hello master, here is your " + getMilk(5,1.5) + " change");
