@@ -26,3 +26,7 @@ function fizzbuzz() {
     }
     console.log(eggs);
 }
+/*
+While döngüsü bir durum devam ederken sürekli çalıştırır yani o durum sürdüğü sürece o döngünün içerisindesindir
+for döngüsünde ise kaç kez calıstıracagımızı belirliyoruz.
+*/
