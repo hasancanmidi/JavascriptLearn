@@ -1,3 +1,5 @@
+//const, let, var
+
 // Sayısal veri tipleri
 
 let x = 5;       // tam sayı (integer)
