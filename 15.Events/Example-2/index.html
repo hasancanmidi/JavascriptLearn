@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Klavye Eventleri</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Klavye Eventleri</h1>
+  <div class="form-group">
+    <label for="input">Bir şey yazın:</label>
+    <input type="text" class="form-control" id="input">
+  </div>
+  <p id="result"></p>
+</div>
+
+<script>
+  const input = document.getElementById('input');
+  const result = document.getElementById('result');
+
+  input.addEventListener('keydown', function(event) {
+    result.innerHTML = `Basılan tuş: ${event.key}`;
+  });
+</script>
+
+</body>
+</html>
