@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling Example</title>
+    <style>
+        .parent {
+            padding: 20px;
+            background-color: lightblue;
+        }
+        .child {
+            padding: 20px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent Div
+        <div class="child">
+            Child Div
+        </div>
+    </div>
+
+    <script>
+        // Parent div için event listener
+        document.querySelector('.parent').addEventListener('click', function() {
+            alert('Parent Div clicked');
+        });
+
+        // Child div için event listener
+        document.querySelector('.child').addEventListener('click', function(event) {
+            alert('Child Div clicked');
+            event.stopPropagation(); // Bu satırı etkinleştirirseniz, bubbling engellenir
+        });
+    </script>
+</body>
+</html>
